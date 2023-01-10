@@ -22,14 +22,18 @@ class Program
             getNumber = Console.ReadLine();
             number = int.Parse(getNumber);
             numbers.Add(number);
+            //Part 1 sum
             sum += number;
             
         }
-
-        float average = sum / (numbers.Count - 1);
+        //Part 2: Average
+        float average = ((float)sum) / (numbers.Count - 1);
         Console.WriteLine($"The sum is: {sum}");
         Console.WriteLine($"The average is: {average}");
 
+
+        //Part 3: The largest
+        //Method Order by direct interchange (bubble)
         for (int i = 1; i <= (numbers.Count - 1) ; i++)
         {
             for (int j = (numbers.Count - 1); j >= i ; j--)
